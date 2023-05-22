@@ -11,7 +11,12 @@ import ast
 import time
 from bs4 import BeautifulSoup
 
+from flask_cors import CORS
+
 app = Flask(__name__)
+
+CORS(app)
+
 class model(nn.Module): 
 
     def __init__(self, data, batch_size ,embedding_size, hidden_size,num_layers ,dropout, teacher_forcing_ratio, learning_rate):
