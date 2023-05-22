@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Analyseur morphologique</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 50%;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border-radius: 10px;
+		}
+		input[type="text"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+		button {
+			padding: 10px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1 style="margin-top: -469px; margin-right: -369px;">Analyseur morphologique</h1>
+	<form method="POST" action="{{ url_for('index') }}">
+		<label for="texte1">Input:</label>
+		<input type="text" id="texte1" name="texte1" value="{{ texte1 }}">
+		<button type="submit">Analyser</button>
+		
+		<label for="texte2">Output :</label>
+		<input type="text" id="texte2" name="texte2" value="{{ texte2 }}">
+		<button onclick="copyText()">Copy</button>
+	</form>
+	
+	<script>
+		function copyText() {
+			var texte = document.getElementById("texte2");
+			texte.select();
+			document.execCommand("copy");
+			alert("Le texte a été copié !");
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
