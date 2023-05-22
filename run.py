@@ -434,6 +434,7 @@ def clean_data(data):
     cleaned_strings = [clean_arabic(s) for s in data]
     return ' '.join(cleaned_strings)
 
+from flask import jsonify
 
 app = Flask(__name__)
 
@@ -449,7 +450,9 @@ def index():
     else:
         texte1 = ""
         texte2 = ""
-    return render_template('index.html', texte1=texte1, texte2=texte2)
+    response = {"results": texte2}
+    return jsonify(response)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
