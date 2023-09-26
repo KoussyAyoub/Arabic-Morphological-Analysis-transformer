@@ -106,10 +106,6 @@ Copy
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-You can copy and paste this content into a file named README.md in your GitHub repository. Make sure to replace your-username and your-repository with your actual GitHub username and repository name.
 
 ## Contributing
 
